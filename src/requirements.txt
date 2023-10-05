@@ -1,0 +1,5 @@
+numpy==1.19.5
+tqdm==4.59.0
+transformers==4.6.1
+Base
+chardet
