@@ -19,7 +19,6 @@ conda create -n nutrea python=3.8
 conda activate nutrea
 ```
 ```
-pip install torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
 conda install pytorch==1.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 conda install pyg -c pyg
 
@@ -49,7 +48,7 @@ Download the pretrained checkpoint(s) and place under "checkpoints/" directory.
 
 | Dataset |  Metric | Hit@1 | F1  |  Checkpoint   |
 |:--------------:|:---------------:|:------------:|:---------------:|:------------:|
-|  WebQuestionsSP  |    Hit@1    |  77.36   |  71.01   | [drive](https://drive.google.com/file/d/1RS6lXdv0_hRu3EdP8wE63LRLQTC5erNP/view?usp=drive_link)  |
+|  WebQuestionsSP  |    Hit@1    |  77.43   |  71.01   | [drive](https://drive.google.com/file/d/1RS6lXdv0_hRu3EdP8wE63LRLQTC5erNP/view?usp=drive_link)  |
 |  WebQuestionsSP  |    F1    |  76.88    |  72.70  | [drive](https://drive.google.com/file/d/1Gz9wdAOGCi7gGKKLTYSnoxeJ2X4AQlfW/view?usp=drive_link)  |
 |  ComplexWebQuestions  |    Hit@1    |  53.61   |  49.41   | [drive](https://drive.google.com/file/d/1ldTP3yiyCX3W_oq2byX41SmxseH5Dhp8/view?usp=drive_link)  |
 |  ComplexWebQuestions  |    F1    |   53.16   |  49.53   | [drive](https://drive.google.com/file/d/1fNidJ_Exbw0TeM4QS8e05WOgAVltp88Y/view?usp=drive_link)  |
@@ -61,6 +60,7 @@ Download the pretrained checkpoint(s) and place under "checkpoints/" directory.
 |  MetaQA-3hop  |    F1    |    98.89    |   87.06    | [drive](https://drive.google.com/file/d/19-khAGYkYNhJevXPqdDcY2al5PZi5E7a/view?usp=drive_link)  |
 
 * Note, MetaQA-2hop and -3hop Hit@1 and F1 model checkpoints contain identical parameters, respectively.
+* Also note that train / eval performance may vary across different GPU and environments.
 
 ## Run
 Runnable scripts are in the "runs/" directory. To run evaluation with checkpoints,
@@ -75,14 +75,14 @@ Run different scripts to test different datasets and parameters.
 
 
 ## UPDATES
-**2023.10** Initial code release
+**2023.12** Initial code release
 
 
 ## Citation
 
 ```
 @inproceedings{choi2023nutrea,
-  title={TokenMixup: NuTrea: Neural Tree Search for Context-guided Multi-hop KGQA},
+  title={NuTrea: Neural Tree Search for Context-guided Multi-hop KGQA},
   author={Choi, Hyeong Kyu and Lee, Seunghun and Chu, Jaewon and Kim, Hyunwoo J.},
   booktitle={Advances in Neural Information Processing Systems},
   year={2023}
